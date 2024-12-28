@@ -22,18 +22,16 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Framework/Generador:** [AstroJS / Next.js / Otro]
-- **Estilo:** [TailwindCSS / CSS puro / Bootstrap]
-- **Lógica de Backend:** [Node.js / Express / Otro]
-- **Base de Datos:** [MongoDB / Firebase / Ninguna]
-- **Integraciones:** [WhatsApp API, Stripe, etc.]
+- **Framework/Generador:** AstroJS
+- **Estilo:** TailwindCSS
+- **Lógica de Backend:** Node.js
+- **Base de Datos:** Ninguna
+- **Integraciones:** WhatsApp API
 
 ## 🚀 Características
 
 - Diseño **responsivo** y optimizado para dispositivos móviles.
-- [Otra característica importante, como soporte multilenguaje, animaciones personalizadas, etc.]
 - Optimización para SEO.
 - Fácil navegación y experiencia de usuario mejorada.
-- [Añadir otras funcionalidades específicas del proyecto.]
 
 Si tienes preguntas o comentarios, puedes contactarme en mi linkedin https://www.linkedin.com/in/manuel-david-gomez-sanchez/.
