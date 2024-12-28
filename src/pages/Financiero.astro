@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pdf from "../components/Pdf/Pdf.jsx";
+---
+
+<Layout title="Fundamigos - Estados Financieros">
+  <section class="pt-[150px] pb-[200px] w-full">
+    <section
+      class="flex flex-col p-5 justify-center w-full min-[1150px]:w-[1000px] min-[1500px]:w-[1400px] ml-auto mr-auto gap-5"
+    >
+      <h1>Estados <span class="text-[#9C27B0]">Financieros</span> </h1>
+      <p>
+        En Fundamigos, creemos en la transparencia y la confianza como pilares
+        fundamentales de nuestra labor. Por eso, ponemos a tu disposición
+        nuestros estados financieros, donde podrás conocer el uso responsable de
+        los recursos que generosamente nos brindan nuestros aliados y donantes.
+        <br>
+        Aquí encontrarás información detallada sobre nuestras actividades
+        económicas, la distribución de fondos en proyectos sociales, y nuestro
+        compromiso con una gestión eficiente y ética. Gracias a tu apoyo,
+        continuamos construyendo un impacto positivo en las comunidades que más
+        lo necesitan.
+      </p>
+
+      <Pdf />
+    </section>
+  </section>
+</Layout>

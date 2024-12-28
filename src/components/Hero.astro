@@ -1,0 +1,23 @@
+---
+import Icono from "../assets/ICONO.png";
+import { Image } from "astro:assets";
+---
+
+<section class="pt-[200px] pb-[50px] w-full">
+  <section
+    class="flex p-5 justify-center flex-col items-center w-full min-[768px]:flex-row min-[1150px]:w-[1000px] min-[1500px]:w-[1400px] ml-auto mr-auto gap-5"
+  >
+    <section class="flex items-center text-center justify-center flex-col gap-5 w-[100%]">  
+      <h1>Bienvenidos a <span class="text-[#9C27B0]">Fundamigos</span></h1>
+      <p>
+        En FundaAmigos creemos en el poder de la solidaridad para cambiar vidas.
+        Trabajamos para apoyar a comunidades vulnerables, impulsando proyectos
+        que transforman sueños en realidades. Únete a nuestra misión y sé parte
+        del cambio que queremos ver en el mundo.
+      </p>
+    </section>
+    <section class="w-[70%] flex items-center justify-center">
+      <Image src={Icono} alt="Un pájaro sentado sobre un nido de huevos." />
+    </section>
+  </section>
+</section>

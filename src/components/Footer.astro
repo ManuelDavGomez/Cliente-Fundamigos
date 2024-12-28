@@ -1,0 +1,453 @@
+---
+import LogoNav from "../assets/7.png";
+import { Image } from "astro:assets";
+---
+
+<div class="flex">
+  <div class="h-2 bg-[#00ff08] w-1/5"></div>
+  <div class="h-2 bg-[#FFEB3B] w-1/5"></div>
+  <div class="h-2 bg-[#9C27B0] w-1/5"></div>
+  <div class="h-2 bg-[#FF9800] w-1/5"></div>
+  <div class="h-2 bg-[#00ff08] w-1/5"></div>
+</div>
+<footer class="section footer relative w-full">
+  <div class="footer__header">
+    <a href="/" class="footer__logo">
+      <Image src={LogoNav} alt="logo" width={200} />
+    </a>
+    <ul class="social">
+      <!-- <li class="social__item">
+        <a href="#" target="_blank" class="btn social">
+          <span class="icon twitter"></span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" target="_blank" class="btn social">
+          <span class="icon youtube"></span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" target="_blank" class="btn social">
+          <span class="icon telegram"></span>
+        </a>
+      </li> -->
+      <li class="social__item">
+        <a href="https://api.whatsapp.com/send?phone=3116041069" target="_blank" class="btn social">
+          <span class="icon whatsapp"></span>
+        </a>
+      </li>
+    </ul>
+    <button type="button" class="btn icon"  id="scrollToTopButtonMobile">
+      <span class="icon drop-up"></span>
+    </button>
+  </div>
+  <ul class="footer__list">
+    <li class="footer__item active">
+      <a href="/" class="footer__link">Inicio</a>
+    </li>
+    <li class="footer__item">
+      <a href="/QuienesSomos" class="footer__link">Quienes Somos</a>
+    </li>
+    <!-- <li class="footer__item">
+      <a href="#" class="footer__link">Programas y Proyectos</a>
+    </li> -->
+    <li class="footer__item">
+      <a href="/Financiero" class="footer__link">Estados Financieros</a>
+    </li>
+    <li class="footer__item">
+      <a href="/Contacto" class="footer__link">Contacto</a>
+    </li>
+  </ul>
+  <div class="footer__copyright">
+    <p class="desc copyright">IG Launc, LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<button type="button" class="btn icon" id="scrollToTopButtonDesktop">
+  <span class="icon drop-up"></span>
+</button>
+
+<style>
+  :root {
+    --btn-icon-bg-color: #000000;
+    --btn-icon-border-color: #0000004d;
+    --btn-icon-shadow-color: #00000080;
+
+    --btn-social-bg-color: transparent;
+    --btn-social-border-color: transparent;
+
+    --footer-border-color: #191d24;
+
+    --link-color: #000000;
+    --link-hover-color: #ffeb3b;
+    --link-active-color: #ffeb3b;
+
+    --bg-color: #4caf50;
+
+    --desc-copyright-color: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    line-height: 1.2;
+  }
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  body {
+    position: relative;
+  }
+  @media screen and (min-width: 768px) {
+    body > .btn.icon {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    body > .btn.icon {
+      position: fixed;
+      right: 20px;
+      bottom: 50px;
+      z-index: 99;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  .section {
+    background-color: var(--bg-color);
+  }
+  .section.footer {
+    padding: 20px 10vw;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1239.98px) {
+    .section.footer {
+      padding: 20px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    .section.footer {
+      padding: 20px;
+    }
+  }
+  .desc.copyright {
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)));
+    color: var(--desc-copyright-color);
+  }
+  .logo {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 35px;
+    display: block;
+  }
+  .logo.primary {
+    width: 200px;
+    min-width: 200px;
+    height: 35px;
+    min-height: 35px;
+    background: url(https://cdn.worldvectorlogo.com/logos/codepen.svg) no-repeat
+      50% 50% / contain;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer__list {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (max-width: 767.98px) {
+    .footer__list {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .footer__item {
+    width: 100%;
+    flex: 1 1 calc(100% / 6);
+  }
+  .footer__item.active .footer__link {
+    color: var(--link-active-color);
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.8),
+      0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  @media screen and (max-width: 767.98px) {
+    .footer__item {
+      flex: 1 1 calc(100% / 3);
+    }
+  }
+  @media screen and (max-width: 463.98px) {
+    .footer__item {
+      flex: 1 1 calc(100% / 2);
+    }
+  }
+  .footer__link {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--link-color);
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer__link:hover {
+    color: var(--link-hover-color);
+    transition: all 0.3s ease-in-out;
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.8),
+      0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  .footer__link:active {
+    color: var(--link-active-color);
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.8),
+      0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  .footer__header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+  @media screen and (max-width: 767.98px) {
+    .footer__header {
+      grid-template-columns: 1fr;
+    }
+  }
+  .footer__header > .btn.icon {
+    position: absolute;
+    right: 0;
+  }
+  @media screen and (max-width: 767.98px) {
+    .footer__header > .btn.icon {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    .footer__logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .footer__copyright {
+    width: 100%;
+    border-top: 1px solid var(--footer-border-color);
+    padding: 20px;
+    text-align: center;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 0;
+    border: 1px solid transparent;
+    background-color: transaprent;
+    cursor: pointer;
+  }
+  .btn.icon {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--btn-icon-bg-color);
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .btn.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--btn-icon-shadow-color);
+  }
+  .btn.icon:hover::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border: 2px solid var(--btn-icon-border-color);
+    border-radius: 50%;
+    animation: ripple 1s ease-out infinite;
+    z-index: 0;
+  }
+  .btn.icon::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    transition:
+      width 0.4s ease,
+      height 0.4s ease;
+  }
+  .btn.icon .icon {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  .btn.icon:hover .icon {
+    transform: scale(1.2);
+  }
+  .btn.social {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    background-color: var(--btn-social-bg-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .btn.social .icon {
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    position: relative;
+    z-index: 80;
+  }
+  .btn.social:hover .icon {
+    transform: scale(1.2) rotate(360deg);
+  }
+  .btn.social::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--btn-social-border-color);
+    z-index: 0;
+    transform: scale(1);
+    opacity: 0;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+  }
+  .btn.social:hover::after {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    gap: 20px;
+  }
+  .icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    object-fit: contain;
+    display: block;
+  }
+  .icon.drop-up {
+    background: url(https://ig-launch.test-project.pp.ua/img/drop-up.svg)
+      no-repeat 50% 50% / contain;
+  }
+  .icon.twitter {
+    background: url(https://ig-launch.test-project.pp.ua/img/twitter.svg)
+      no-repeat 50% 50% / contain;
+  }
+  .icon.youtube {
+    background: url(https://ig-launch.test-project.pp.ua/img/youtube.svg)
+      no-repeat 50% 50% / contain;
+  }
+  .icon.telegram {
+    background: url(https://ig-launch.test-project.pp.ua/img/telegram.svg)
+      no-repeat 50% 50% / contain;
+  }
+  .icon.whatsapp {
+    background: url(https://ig-launch.test-project.pp.ua/img/whatsapp.svg)
+      no-repeat 50% 50% / contain;
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Obtener ambos botones
+  const scrollToTopButtonMobile = document.getElementById("scrollToTopButtonMobile");
+  const scrollToTopButtonDesktop = document.getElementById("scrollToTopButtonDesktop");
+
+  // Función para manejar el scroll hacia arriba
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Desplazamiento suave
+    });
+  };
+
+  // Función para reiniciar la funcionalidad cada ciertos segundos
+  const reiniciarScroll = () => {
+    // Volver a agregar los eventos de scroll
+    if (scrollToTopButtonMobile) {
+      scrollToTopButtonMobile.removeEventListener("click", handleScrollToTop);
+      scrollToTopButtonMobile.addEventListener("click", handleScrollToTop);
+    }
+
+    if (scrollToTopButtonDesktop) {
+      scrollToTopButtonDesktop.removeEventListener("click", handleScrollToTop);
+      scrollToTopButtonDesktop.addEventListener("click", handleScrollToTop);
+    }
+  };
+
+  // Función para manejar el evento del botón
+  const handleScrollToTop = () => {
+    console.log("¡Botón clickeado!");
+    scrollToTop(); 
+  };
+
+  // Verificar si el botón de dispositivos móviles está presente y agregar el evento
+  if (scrollToTopButtonMobile) {
+    scrollToTopButtonMobile.addEventListener("click", handleScrollToTop); 
+  } else {
+    console.error("El botón móvil de scroll no fue encontrado.");
+  }
+
+  // Verificar si el botón de escritorio está presente y agregar el evento
+  if (scrollToTopButtonDesktop) {
+    scrollToTopButtonDesktop.addEventListener("click", handleScrollToTop); 
+  } else {
+    console.error("El botón de escritorio de scroll no fue encontrado.");
+  }
+
+  // Reiniciar la funcionalidad cada 5 segundos (5000 ms)
+  setInterval(reiniciarScroll, 1000);
+});
+
+</script>
+

@@ -1,0 +1,45 @@
+<section class="w-full">
+  <section
+    class="flex p-5 pt-[50px] pb-[50px] justify-center flex-col w-full min-[1150px]:w-[1000px] min-[1500px]:w-[1400px] ml-auto mr-auto text-center"
+  >
+    <section>
+      <h1 class="mb-5">
+        Nuestra <span class="text-[#9C27B0]">Presencia</span>
+      </h1>
+    </section>
+
+    <section>
+      <section class="mapswrapper">
+        <iframe
+          width="100%"
+          height="500px"
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Calle%206%20%23%2021-78%20popayan&zoom=20&maptype=satellite"
+        ></iframe>
+      </section>
+    </section>
+  </section>
+</section>
+
+<style>
+  .mapswrapper {
+    background: #fff;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+  .mapswrapper iframe {
+    border: 0;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+  }
+  .mapswrapper a {
+    color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+</style>
