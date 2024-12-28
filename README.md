@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Fundacion Fundamigos
 
 ```sh
 npm create astro@latest -- --template basics
